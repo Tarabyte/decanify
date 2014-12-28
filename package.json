@@ -1,0 +1,33 @@
+{
+  "name": "decanify",
+  "version": "0.1.0",
+  "description": "Prepare canjs bower package for debowerify transform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tarabyte/decanify.git"
+  },
+  "keywords": [
+    "debowerify",
+    "deamd",
+    "canjs"
+  ],
+  "author": "tarabyte",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Tarabyte/decanify/issues"
+  },
+  "homepage": "https://github.com/Tarabyte/decanify",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0",
+    "browserify": "^8.0.2",
+    "gulp-mocha": "^2.0.0",
+    "gulp-jshint": "^1.9.0",
+    "jshint-stylish": "^1.0.0"
+  }
+}

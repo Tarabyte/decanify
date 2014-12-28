@@ -1,0 +1,24 @@
+{
+  "name": "decanify",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Tarabyte/decanify",
+  "authors": [
+    "tarabyte"
+  ],
+  "description": "Prepare canjs package for debowerify transform",
+  "main": "index.js",
+  "keywords": [
+    "canjs",
+    "deamd",
+    "debowerify"
+  ],
+  "license": "Apache 2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
