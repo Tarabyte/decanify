@@ -1,1 +1,3 @@
-var a = require('mocha');
+module.exports = function() {
+  
+};
