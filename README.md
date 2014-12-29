@@ -6,6 +6,12 @@ decanify
 
 This package was intended to address the very specific problem. To allow [canjs](http://canjs.com) installed via bower package to run smoothly with browserify. Period. No general purpose AMD to CommonJS converting and such.
 
+***
+Warning: Consider using [WebPack](https://github.com/webpack/webpack) instead.
+***
+
+
+
 ##Why not [deamdify](https://github.com/jaredhanson/deamdify)?
 Mainly three reasons:
 
@@ -13,12 +19,15 @@ Mainly three reasons:
 - There are critical open issues.
 - It wont work with CanJS due to child dependencies.
 
+This package was inspired by deAMDify but heavily rewritten to meet the specific requirements.
+Anyway kudos goes to [Jared Hanson](https://github.com/jaredhanson).
+
 ##Requirements
-- CanJS was installed via `bower install canjs`
-- [debowerify](https://github.com/eugeneware/debowerify) was installed.
+- CanJS should be installed via `bower install canjs`
+- [debowerify](https://github.com/eugeneware/debowerify) is required.
 - Allowed file extensions: js or coffee. 
-- decanify has to run before debowerify.
-- coffeify has to run before decanify.
+- decanify should run before debowerify.
+- coffeify should run before decanify.
 
 ##Example
 
