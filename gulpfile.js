@@ -1,4 +1,5 @@
 /*jshint node: true*/
+'use strict';
 var gulp = require('gulp');
 var lint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
@@ -16,7 +17,7 @@ gulp.task('lint', function(){
 gulp.task('test', function() {
   return gulp.src(tests)
     .pipe(mocha({
-      reporter: 'nyan',
+      reporter: 'spec',
       ui: 'bdd'
     }));
 });
