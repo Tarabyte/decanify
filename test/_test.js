@@ -10,17 +10,18 @@ var decanify = require('../');
  */
 function Test(name) {
   var ext = path.extname(name);
-  console.log(ext);
+
   this.extension = ext;
-  this.file = path.join(__dirname, 'data', name);
-  this.expected = path.join(__dirname, 'data', 
-                            path.basename(name, ext) + '.expect' + ext);
+  this.file = name;
+  this.expected = path.join(
+    path.dirname(name),
+    path.basename(name, ext) + '.expect' + ext);
 }
 
 /**
  * Run file transform and comparison.
  */
-Test.prototype.run = function(done) {
+Test.prototype.run = function() {
   var file = this.file,
       stream = decanify(file),
       expected = fs.readFileSync(this.expected, 'utf-8');
@@ -42,7 +43,6 @@ Test.prototype.run = function(done) {
     }).on('end', function() {    
       result.should.be.equal(expected);
       next();
-      done();
     });
     
     fs.createReadStream(file).pipe(stream);
