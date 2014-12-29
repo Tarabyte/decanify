@@ -8,9 +8,12 @@ var decanify = require('../');
  * Test constructor.
  */
 function Test(name) {
+  var ext = path.extname(name);
+  console.log(ext);
+  this.extension = ext;
   this.file = path.join(__dirname, 'data', name);
   this.expected = path.join(__dirname, 'data', 
-                            path.basename(name, '.js') + '.expect.js');
+                            path.basename(name, ext) + '.expect' + ext);
 }
 
 /**
