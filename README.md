@@ -23,12 +23,23 @@ Mainly three reasons:
 ##Example
 
 ```javascript
-//index.js
-var can = require('can');
+//inside index.js
+var can = require('canjs/amd/can');
+
+//inside bower_components/canjs/amd/can.js
+define(["can/util/library", "can/control/route", "can/model", "can/view/mustache", "can/component"], function(can) {
+	return can;
+});
+
 //-t decanify
-var can = require('canjs/amd/can.js');
+var can = require('canjs/can/util/library.js');
+require('canjs/can/control/route.js');
+...
+require('canjs/can/component.js');
+module.exports = can;
+
 //-t debowerify
-var can = require('../.bower_components/canjs/amd/can.js');
+var can = require('./..\\..\\bower_components\\canjs\\amd\\can');
 
 ```
 
