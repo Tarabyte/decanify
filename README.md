@@ -1,4 +1,4 @@
-decanify
+decanify![Build Status](https://travis-ci.org/Tarabyte/decanify.svg)
 ========
 
 > Prepare canjs bower package for browserify's debowerify transform
