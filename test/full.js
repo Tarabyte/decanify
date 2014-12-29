@@ -6,7 +6,7 @@ var debowerify = require('debowerify');
 var browserify = require('browserify');
 var totalFileLength = 458059; //magic number;
 
-describe.only('full transform', function(){
+describe.skip('full transform', function(){
   var b = browserify();
   b.add('./test/full/_full.js');
   b.transform(decanify);
