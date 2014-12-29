@@ -6,6 +6,7 @@ var decanify = require('../');
 
 /**
  * Test constructor.
+ * @param {String} name File path.
  */
 function Test(name) {
   var ext = path.extname(name);

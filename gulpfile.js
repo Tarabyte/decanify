@@ -7,6 +7,7 @@ var mocha = require('gulp-mocha');
 
 var source = './index.js';
 var tests = './test/**/[^_]*.js';
+var allTests = './test/**/*';
 
 gulp.task('lint', function(){
   return gulp.src(source)
@@ -24,7 +25,7 @@ gulp.task('test', function() {
 
 gulp.task('watch', function() {
   gulp.watch(source, ['lint', 'test']);
-  gulp.watch(tests, ['test']);
+  gulp.watch(allTests, ['test']);
 });
 
 gulp.task('default', ['lint', 'test', 'watch']);
